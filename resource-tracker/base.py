@@ -3,13 +3,7 @@ import json
 import os
 
 """
-store-name
-Image
-product name
-product url
-description
-price
-available or not 
+Stores the following product information into json file
 """
 
 class Store:
