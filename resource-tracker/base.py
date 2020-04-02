@@ -15,7 +15,7 @@ class Store:
         self.product_url = ''
         self.description = ''
         self.price = ''
-        self.stock = None
+        # self.stock = None
     
     def add_item(self):
         self.store_data['store-name'] = self.store_name
@@ -24,7 +24,7 @@ class Store:
         self.store_data['product-url'] = self.product_url
         self.store_data['product-description'] = self.description
         self.store_data['price'] = self.price
-        self.store_data['stock'] = self.stock
+        # self.store_data['stock'] = self.stock
         #write into json
         self.write_into_json()
 
