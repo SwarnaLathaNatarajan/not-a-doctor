@@ -24,6 +24,7 @@ class Store:
         self.store_data['product-url'] = self.product_url
         self.store_data['product-description'] = self.description
         self.store_data['price'] = self.price
+        print(self.store_data)
         # self.store_data['stock'] = self.stock
         #write into json
         self.write_into_json()
