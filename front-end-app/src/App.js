@@ -18,7 +18,7 @@ function App() {
         >
           <Navigation>
             <Link to="/module1">Module1</Link>
-            <Link to="/module2">Module2</Link>
+            <Link to="/Trendchart">Trendchart</Link>
             <Link to="/TopicModelTreemap">News Topics</Link>
             <Link to="/module4">Module4</Link>
           </Navigation>
