@@ -5,7 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import TopicModelTreemap from "./components/TopicModelTreemap";
-
+import SampChart from "./components/sampleChart";
 ReactDOM.render(
   <React.StrictMode>
     <TopicModelTreemap />
