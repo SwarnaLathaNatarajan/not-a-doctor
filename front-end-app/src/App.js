@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="demo-big-content">
     <Layout>
-        <Header title="Title" scroll>
+        <Header className="header-color" title={<Link style={{textDecoration: 'none',color: 'white'}} to="/">not-a-doctor</Link>} scroll>
             <Navigation>
                 <Link to="/module1">Module1</Link>
                 <Link to="/module2">Module2</Link>
@@ -15,14 +15,7 @@ function App() {
                 <Link to="/module4">Module4</Link>
             </Navigation>
         </Header>
-        {/* <Drawer title="Title">
-            <Navigation>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-                <a href="/">Link</a>
-            </Navigation>
-        </Drawer> */}
+        
         <Content>
             <div className="page-content" />
             <Main/>
