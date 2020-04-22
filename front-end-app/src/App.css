@@ -1,12 +1,18 @@
 .header-color {
-  background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .landing-grid {
-  background: #121212;  /* fallback for old browsers */
+  background: #121212; /* fallback for old browsers */
   text-align: center;
   position: fixed;
   top: 0;
@@ -25,7 +31,7 @@
 }
  */
 
-.banner-text h1{
+.banner-text h1 {
   padding-top: 3em;
   /* height: 100%;
   width: 100%;
@@ -38,14 +44,14 @@
   color: white;
 }
 
-.banner-text p{
-color: white;
-font-size: 20px;
-padding: 1em;
+.banner-text p {
+  color: white;
+  font-size: 20px;
+  padding: 1em;
 }
 
-.banner-text hr{
+.banner-text hr {
   border-top: 5px dotted white;
-  width: 58%; 
+  width: 58%;
   margin: auto;
 }
