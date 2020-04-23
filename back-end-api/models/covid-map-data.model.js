@@ -15,11 +15,12 @@ const CovidMapData = function(covidMapData) {
   this.Date_Uploaded = covidMapData.Uploaded;
 };
 
-CovidMapData.getAll = (req, result) => {
-  async function queryGetAll()
+CovidMapData.getLastUpdated = (req, result) => {
+  async function queryGetLastUpdated()
   {
     const sqlQuery = `SELECT *
-        FROM \`not-a-doctor-273222.Topic_Modelling.CovidData\``;
+        FROM \`not-a-doctor-273222.Topic_Modelling.CovidData\`
+        WHERE Date_uploaded = (select MAX(Date_uploaded) from \`not-a-doctor-273222.Topic_Modelling.CovidData\`)`;
     const options = {
       query: sqlQuery,
       location: 'US'
@@ -28,7 +29,7 @@ CovidMapData.getAll = (req, result) => {
     console.log("GetAll Covid Map Data api called!");
     result(null, rows);
   }
-  queryGetAll();
+  queryGetLastUpdated();
 };
 
 module.exports = CovidMapData;

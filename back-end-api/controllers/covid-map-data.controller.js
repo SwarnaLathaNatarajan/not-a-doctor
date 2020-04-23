@@ -1,8 +1,8 @@
 const covidMapData = require("../models/covid-map-data.model.js");
 
 // Retrieve counts for all dates from the database.
-exports.getAll = (req, res) => {
-    covidMapData.getAll(req, (err, data) => {
+exports.getLastUpdated = (req, res) => {
+    covidMapData.getLastUpdated(req, (err, data) => {
         if (err)
           res.status(500).send({
             message:
