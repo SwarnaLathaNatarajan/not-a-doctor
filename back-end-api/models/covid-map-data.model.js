@@ -32,4 +32,21 @@ CovidMapData.getLastUpdated = (req, result) => {
   queryGetLastUpdated();
 };
 
+CovidMapData.getAggregateLastUpdated = (req, result) => {
+  async function queryGetLastUpdated()
+  {
+    const sqlQuery = `SELECT Date_uploaded, SUM(Confirmed) as Confirmed, SUM(Deaths) as Deaths, SUM(Recovered) as Recovered, SUM(Active) as Active
+        FROM \`not-a-doctor-273222.Topic_Modelling.CovidData\`
+        WHERE Date_uploaded = (select MAX(Date_uploaded) from \`not-a-doctor-273222.Topic_Modelling.CovidData\`)
+        GROUP BY Date_uploaded`;
+    const options = {
+      query: sqlQuery,
+      location: 'US'
+      };
+    const [rows] = await bigqueryClient.query(options);
+    console.log("GetAll Covid Map Data api called!");
+    result(null, rows);
+  }
+  queryGetLastUpdated();
+};
 module.exports = CovidMapData;
