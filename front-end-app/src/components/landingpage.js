@@ -10,7 +10,7 @@ class Landing extends Component{
                         <div className="banner-text">
                             <h1>Not-a-doctor</h1>
                             <hr/>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <p>Yet another COVID dashboard by Engineers. </p>
                         </div>
 
                     </Cell>

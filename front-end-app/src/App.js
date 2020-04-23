@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Layout, Header, Navigation, Content} from 'react-mdl';
-import { Link } from 'react-router-dom';
+import { NavLink,Link } from 'react-router-dom';
 import Main from './components/main';
 function App() {
   return (
@@ -9,10 +9,10 @@ function App() {
     <Layout>
         <Header className="header-color" title={<Link style={{textDecoration: 'none',color: 'white'}} to="/">not-a-doctor</Link>} scroll>
             <Navigation>
-                <Link to="/module1">Module1</Link>
-                <Link to="/module2">Module2</Link>
-                <Link to="/module3">Module3</Link>
-                <Link to="/module4">Module4</Link>
+                <NavLink activeStyle={{fontWeight: "bold"}} to="/module1" >Module1</NavLink>
+                <NavLink activeStyle={{fontWeight: "bold"}} to="/module2">Module2</NavLink>
+                <NavLink activeStyle={{fontWeight: "bold"}} to="/module3">Module3</NavLink>
+                <NavLink activeStyle={{fontWeight: "bold"}} to="/module4">Resource</NavLink>
             </Navigation>
         </Header>
         
