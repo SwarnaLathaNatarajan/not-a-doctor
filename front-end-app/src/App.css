@@ -24,7 +24,7 @@
 } */
 
 
-.banner-text h1{
+.banner-text h1 {
   padding-top: 3em;
   /* height: 100%;
   width: 100%;
@@ -37,17 +37,18 @@
   color: white;
 }
 
-.banner-text p{
-color: white;
-font-size: 20px;
-padding: 1em;
+.banner-text p {
+  color: white;
+  font-size: 20px;
+  padding: 1em;
 }
 
-.banner-text hr{
+.banner-text hr {
   border-top: 5px dotted white;
-  width: 58%; 
+  width: 58%;
   margin: auto;
 }
+
 
 .desc h1{
   text-align: center;
@@ -73,4 +74,5 @@ padding: 1em;
     color: white;
     background-color: #03DAC5;
 }
+
 

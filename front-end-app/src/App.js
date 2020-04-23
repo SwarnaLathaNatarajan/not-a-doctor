@@ -15,14 +15,13 @@ function App() {
                 <NavLink activeStyle={{fontWeight: "bold"}} to="/module4">Resource</NavLink>
             </Navigation>
         </Header>
-        
-        <Content>
-            <div className="page-content" />
-            <Main/>
-        </Content>
-    </Layout>
-</div>
 
+        <Content>
+          <div className="page-content" />
+          <Main />
+        </Content>
+      </Layout>
+    </div>
   );
 }
 
