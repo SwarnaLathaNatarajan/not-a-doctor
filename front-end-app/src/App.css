@@ -1,18 +1,10 @@
 .header-color {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 .landing-grid {
-  background: #121212; /* fallback for old browsers */
   text-align: center;
   position: fixed;
   top: 0;
@@ -21,15 +13,16 @@
   height: 100%;
 }
 
-/* .banner-text{
+/* 
+.banner-text{
   padding-top: 5em;
-  background-color: white;
+  background-color: rgba();
   opacity: 5%;
   width: 75%;
   margin: auto;
   border-radius: 10px;
-}
- */
+} */
+
 
 .banner-text h1 {
   padding-top: 3em;
@@ -55,3 +48,31 @@
   width: 58%;
   margin: auto;
 }
+
+
+.desc h1{
+  text-align: center;
+  font-size: 32px;
+  /* position: fixed;
+  top: 25%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px; */
+  color: #C4C4C4;
+}
+
+.desc p{
+  color: #B2B2B2;
+  font-size: 20px;
+  padding: 1em;
+  }
+
+  a.active {
+    display: block;
+    width: 100%;
+    height:100%;
+    color: white;
+    background-color: #03DAC5;
+}
+
+
