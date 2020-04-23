@@ -34,7 +34,7 @@ NewsData.getTopics = (req, result) => {
   var results = []
   async function querygetTopics()
   {
-    fs.createReadStream('./news-data/topics.csv')
+    fs.createReadStream('./news-data/' + req.query.filename + '.csv')
     .pipe(csv())
     .on('data', (data) => results.push(data))
     .on('end', () => {
