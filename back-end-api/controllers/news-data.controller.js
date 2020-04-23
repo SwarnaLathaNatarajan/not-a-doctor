@@ -11,3 +11,14 @@ exports.getNewsWithKeyword = (req, res) => {
         else res.send(data);
       });
 };
+
+exports.getTopics = (req, res) => {
+  newsData.getTopics(req, (err, data) => {
+      if (err)
+        res.status(500).send({
+          message:
+            err.message || "Some error occurred while retrieving topics."
+        });
+      else res.send(data);
+    });
+};
