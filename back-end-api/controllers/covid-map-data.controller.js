@@ -1,8 +1,8 @@
 const covidMapData = require("../models/covid-map-data.model.js");
 
-// Retrieve counts for all dates from the database.
-exports.getAll = (req, res) => {
-    covidMapData.getAll(req, (err, data) => {
+// Retrieve covid map data for late update 
+exports.getLastUpdated = (req, res) => {
+    covidMapData.getLastUpdated(req, (err, data) => {
         if (err)
           res.status(500).send({
             message:
@@ -10,4 +10,16 @@ exports.getAll = (req, res) => {
           });
         else res.send(data);
       });
+};
+
+// Get aggregate info
+exports.getAggregates = (req, res) => {
+  covidMapData.getAggregates(req, (err, data) => {
+      if (err)
+        res.status(500).send({
+          message:
+            err.message || "Some error occurred while retrieving aggregate covid map data."
+        });
+      else res.send(data);
+    });
 };

@@ -1,4 +1,6 @@
 const bigqueryClient = require("./db.js");
+const csv= require("csv-parser");
+const fs = require('fs')
 
 const NewsData = function(newsData) {
   this.Author = newsData.Author;
@@ -26,6 +28,20 @@ NewsData.getNewsWithKeyword = (req, result) => {
     result(null, rows);
   }
   queryGetNewsWithKeyword();
+};
+
+NewsData.getTopics = (req, result) => {
+  var results = []
+  async function querygetTopics()
+  {
+    fs.createReadStream('./news-data/' + req.query.filename + '.csv')
+    .pipe(csv())
+    .on('data', (data) => results.push(data))
+    .on('end', () => {
+      result(null, results);
+    });
+  }
+  querygetTopics();
 };
 
 module.exports = NewsData;

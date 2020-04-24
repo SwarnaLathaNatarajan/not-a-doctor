@@ -9,7 +9,7 @@ import Module4 from "./module4";
 const Main = () => (
   <Switch>
     <Route exact path="/" component={LandingPage} />
-    <Route path="/module1" component={Module1} />
+    <Route path="/Module1" component={Module1} />
     <Route path="/module2" component={Module2} />
     <Route path="/TopicModelTreeMap" component={TopicModelTreemap} />
     <Route path="/module4" component={Module4} />
