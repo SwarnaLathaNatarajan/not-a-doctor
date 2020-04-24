@@ -1,22 +1,12 @@
-version: "3"
+version: '2'
 services:
-    frontend:
-        container_name: webapp
-        build:
-            context: ./front-end-app
-            dockerfile: Dockerfile
-        image: not-a-doctor/webapp
-        ports:
-            - "3000:3000"
-        volumes:
-            - ./front-end-app:/usr/src/app
-    backend:
-        container_name: api
-        build:
-            context: ./back-end-api
-            dockerfile: Dockerfile
-        image: not-a-doctor/api
-        ports:
-            - "9000:9000"
-        volumes:
-            - ./back-end-api:/usr/src/app
+  ui:
+    build: ./ui
+    ports:
+      - '3000:3000'
+    depends_on:
+      - api
+  api:
+    build: ./api
+    ports:
+      - '9000:9000'
