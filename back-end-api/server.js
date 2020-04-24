@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 require("./routes/count-info.routes.js")(app);
 require("./routes/covid-map-data.routes.js")(app);
 require("./routes/news-data.routes.js")(app);
+require("./routes/resource-tracker.routes.js")(app);
 
 // set port, listen for requests
 app.listen(9000, () => {
