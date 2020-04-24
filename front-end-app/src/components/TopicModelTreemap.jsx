@@ -107,13 +107,19 @@ class TopicModelTreemap extends Component {
             title: {
               text: "Top News Topics",
               font: { color: "#C0C0C0", size: 35 },
+=======
+            width: 1400,
+            height: 900,
+            title: {
+              text: "Top News-Topics",
+              font: { color: "#C0C0C0", size: 33 },
+>>>>>>> Stashed changes
             },
             plot_bgcolor: "black",
             paper_bgcolor: "#121212",
             treemapcolorway: [
               "#EF0078",
               "#1EB980",
-              "#FFCF44",
               "#1EA4B9",
               "#B15DFF",
               "#72DEFF",
