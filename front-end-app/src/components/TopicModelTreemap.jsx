@@ -98,12 +98,16 @@ class TopicModelTreemap extends Component {
               ],
               values: probs,
               textposition: "middle center",
+              textfont: { family: "Roboto", size: 25 },
             },
           ]}
           layout={{
-            width: 1400,
-            height: 900,
-            title: { text: "Top News Topics", font: { color: "#C0C0C0" } },
+            width: 1200,
+            height: 800,
+            title: {
+              text: "Top News Topics",
+              font: { color: "#C0C0C0", size: 35 },
+            },
             plot_bgcolor: "black",
             paper_bgcolor: "#121212",
             treemapcolorway: [

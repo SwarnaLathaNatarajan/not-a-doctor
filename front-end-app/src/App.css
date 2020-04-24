@@ -1,7 +1,15 @@
 .header-color {
-  background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .landing-grid {
@@ -22,7 +30,6 @@
   margin: auto;
   border-radius: 10px;
 } */
-
 
 .banner-text h1 {
   padding-top: 3em;
@@ -49,8 +56,7 @@
   margin: auto;
 }
 
-
-.desc h1{
+.desc h1 {
   text-align: center;
   font-size: 32px;
   /* position: fixed;
@@ -58,21 +64,41 @@
   left: 50%;
   margin-top: -50px;
   margin-left: -100px; */
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
 
-.desc p{
-  color: #B2B2B2;
+.desc p {
+  color: #b2b2b2;
   font-size: 20px;
   padding: 1em;
-  }
-
-  a.active {
-    display: block;
-    width: 100%;
-    height:100%;
-    color: white;
-    background-color: #03DAC5;
 }
 
+a.active {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #03dac5;
+}
 
+.modalbody {
+  background-color: #121212;
+  color: #121212;
+  border-radius: 20 !important;
+}
+.topicOLFoot {
+  background-color: #121212;
+  border: 0px !important;
+}
+.show-grid {
+  background-color: #121212;
+  color: #121212;
+  border-radius: 10;
+}
+.modalbg {
+  /* background-color: #121212; */
+  opacity: 95%;
+  color: #121212 !important;
+  /* filter: blur(2px); */
+  border-radius: 10;
+}
