@@ -1,6 +1,6 @@
 const bigqueryClient = require("./db.js");
 
-const CovidMapData = function(covidMapData) {
+const CovidMapData = function (covidMapData) {
   this.Admin2 = covidMapData.Admin2;
   this.Province_State = covidMapData.Province_State;
   this.Country_Region = covidMapData.Country_Region;
@@ -16,15 +16,14 @@ const CovidMapData = function(covidMapData) {
 };
 
 CovidMapData.getLastUpdated = (req, result) => {
-  async function queryGetLastUpdated()
-  {
+  async function queryGetLastUpdated() {
     const sqlQuery = `SELECT *
         FROM \`not-a-doctor-273222.Topic_Modelling.CovidData\`
         WHERE Date_uploaded = (select MAX(Date_uploaded) from \`not-a-doctor-273222.Topic_Modelling.CovidData\`)`;
     const options = {
       query: sqlQuery,
-      location: 'US'
-      };
+      location: "US",
+    };
     const [rows] = await bigqueryClient.query(options);
     console.log("Get Last Updated Covid Map Data api called!");
     result(null, rows);
@@ -33,15 +32,14 @@ CovidMapData.getLastUpdated = (req, result) => {
 };
 
 CovidMapData.getAggregates = (req, result) => {
-  async function queryGetAggregates()
-  {
+  async function queryGetAggregates() {
     const sqlQuery = `SELECT Date_uploaded, SUM(Confirmed) as Confirmed, SUM(Deaths) as Deaths, SUM(Recovered) as Recovered, SUM(Active) as Active
         FROM \`not-a-doctor-273222.Topic_Modelling.CovidData\`
         GROUP BY Date_uploaded`;
     const options = {
       query: sqlQuery,
-      location: 'US'
-      };
+      location: "US",
+    };
     const [rows] = await bigqueryClient.query(options);
     console.log("Get Aggregates Covid Map Data api called!");
     result(null, rows);

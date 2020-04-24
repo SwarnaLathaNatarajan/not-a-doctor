@@ -9,7 +9,12 @@ class Trendchart extends Component {
   };
   render() {
     var date = this.state.data.map((val, i) => {
-      return val.Date_uploaded;
+      var dt1 = parseInt(val.Date_uploaded.substring(3, 5));
+      var mon1 = parseInt(val.Date_uploaded.substring(0, 2));
+      var yr1 = parseInt(val.Date_uploaded.substring(6, 10));
+      var date1 = new Date(yr1, mon1 - 1, dt1);
+      return date1;
+      // return Date.parse(val.Date_uploaded);
     });
     var confirmed = this.state.data.map((val, i) => {
       return val.Confirmed;
@@ -28,7 +33,7 @@ class Trendchart extends Component {
               x: date ? date : 0,
               y: confirmed ? confirmed : 0,
               type: "scatter",
-              mode: "lines+markers",
+              mode: "markers",
               line: { color: "#F4B000" },
               name: "Confirmed Cases",
             },
@@ -36,7 +41,7 @@ class Trendchart extends Component {
               x: date ? date : 0,
               y: deaths ? deaths : 0,
               type: "scatter",
-              mode: "lines+markers",
+              mode: "markers",
               line: { color: "#870000" },
               name: "Death Cases",
             },
@@ -44,7 +49,7 @@ class Trendchart extends Component {
               x: date ? date : 0,
               y: recovered ? recovered : 0,
               type: "scatter",
-              mode: "lines+markers",
+              mode: "markers",
               line: { color: "#008000" },
               name: "Recovered Cases",
             },
@@ -63,20 +68,17 @@ class Trendchart extends Component {
               yanchor: "top",
               font: {
                 color: "#C0C0C0",
-                family: "Roboto, sans-serif",
                 size: 20,
               },
             },
             xaxis: {
-              type: "time",
-              tickformat: "%d %b %y",
+              type: "date",
             },
             legend: {
               x: 1,
               y: 1,
               traceorder: "normal",
               font: {
-                family: "sans-serif",
                 size: 12,
                 color: "white",
               },
