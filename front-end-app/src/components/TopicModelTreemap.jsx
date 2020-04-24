@@ -102,19 +102,11 @@ class TopicModelTreemap extends Component {
             },
           ]}
           layout={{
-<<<<<<< Updated upstream
             width: 1200,
             height: 800,
             title: {
               text: "Top News Topics",
               font: { color: "#C0C0C0", size: 35 },
-=======
-            width: 1400,
-            height: 900,
-            title: {
-              text: "Top News-Topics",
-              font: { color: "#C0C0C0", size: 33 },
->>>>>>> Stashed changes
             },
             plot_bgcolor: "black",
             paper_bgcolor: "#121212",
