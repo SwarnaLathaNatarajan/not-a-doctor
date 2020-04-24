@@ -12,9 +12,9 @@ exports.getLastUpdated = (req, res) => {
       });
 };
 
-// Get aggregate info for last update
-exports.getAggregateLastUpdated = (req, res) => {
-  covidMapData.getAggregateLastUpdated(req, (err, data) => {
+// Get aggregate info
+exports.getAggregates = (req, res) => {
+  covidMapData.getAggregates(req, (err, data) => {
       if (err)
         res.status(500).send({
           message:
