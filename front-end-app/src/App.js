@@ -20,7 +20,7 @@ function App() {
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module1">
               Module1
             </NavLink>
-            <NavLink activeStyle={{ fontWeight: "bold" }} to="/Trendchart">
+            <NavLink activeStyle={{ fontWeight: "bold" }} to="/module2">
               Module2
             </NavLink>
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module3">
