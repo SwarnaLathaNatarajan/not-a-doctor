@@ -4,7 +4,7 @@ import Plot from "react-plotly.js";
 class Trendchart extends React.Component {
   state = { data: [] };
   componentDidMount = () => {
-    fetch("/covid-map-data")
+    fetch("/covid-map-data/last-updated")
       .then((res) => res.json())
       .then((data) => this.setState({ data }))
       .then((data) => console.log(data));
@@ -15,38 +15,49 @@ class Trendchart extends React.Component {
         return row[key];
       });
     }
-
+    function unpack_bubble(rows) {
+      return rows.map(function (row) {
+        return row["Confirmed"] / 100;
+      });
+    }
     return (
       <React.Fragment>
-        <div id="div1" style={{ backgroundColor: "#121212" }}>
+        <div
+          id="div1"
+          style={{ height: "100%", width: "100%", backgroundColor: "black" }}
+        >
           <Plot
             data={[
               {
                 type: "scattermapbox",
                 lon: unpack(this.state.data, "Long_"),
                 lat: unpack(this.state.data, "Lat"),
-                text: unpack(this.state.data, "Country_Region"),
-                customdata: [
-                  unpack(this.state.data, "Confirmed"),
-                  unpack(this.state.data, "Deaths"),
-                  unpack(this.state.data, "Recovered"),
-                ],
+                text: unpack(this.state.data, "Combined_Key"),
+                customdata: unpack(this.state.data, "Confirmed"),
+                meta: unpack(this.state.data, "Deaths"),
+                texttemplate: unpack(this.state.data, "Recovered"),
+                // ],
+
                 mode: "markers",
                 marker: {
-                  size: unpack(this.state.data, "Confirmed") / 5000,
+                  size: unpack_bubble(this.state.data),
+                  sizemode: "area",
                   color: "red",
-                  opacity: 0.5,
+                  opacity: 0.3,
                 },
                 hovertemplate:
                   "<b>%{text}</b><br><br>" +
-                  "Confirmed: %{customdata[0]}<br>" +
-                  "Deaths : %{customdata[1]}<br>" +
-                  "Recovered : %{customdata[2]}<br> <extra></extra>",
-                // text: ["Montreal"],
+                  "Confirmed: %{customdata}<br>" +
+                  "Deaths : %{meta}<br>" +
+                  "Recovered : %{texttemplate}<br> <extra></extra>",
               },
             ]}
             layout={{
-              autosize: true,
+              autosize: false,
+              width: 1500,
+              height: 800,
+              plot_bgcolor: "black",
+              paper_bgcolor: "black",
               hovermode: "closest",
               mapbox: {
                 bearing: 0,
