@@ -102,6 +102,7 @@ class TopicModelTreemap extends Component {
             },
           ]}
           layout={{
+<<<<<<< Updated upstream
             width: 1200,
             height: 800,
             title: {
@@ -120,6 +121,7 @@ class TopicModelTreemap extends Component {
             treemapcolorway: [
               "#EF0078",
               "#1EB980",
+              // "#FFCF44",
               "#1EA4B9",
               "#B15DFF",
               "#72DEFF",
