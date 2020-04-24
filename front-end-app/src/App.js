@@ -24,11 +24,7 @@ function App() {
               Module2
             </NavLink>
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module3">
-<<<<<<< Updated upstream
-              Module3
-=======
               NewsTopics
->>>>>>> Stashed changes
             </NavLink>
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module4">
               Resource
