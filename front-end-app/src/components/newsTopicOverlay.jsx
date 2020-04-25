@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import { Container, Row, Col } from "reactstrap";
 import Image from "react-bootstrap/Image";
 import { Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 function MydModalWithGrid(props) {
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
