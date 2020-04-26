@@ -1,12 +1,15 @@
 version: '2'
 services:
-  ui:
-    build: ./ui
-    ports:
-      - '3000:3000'
-    depends_on:
-      - api
   api:
-    build: ./api
+    build: ./back-end-api
     ports:
       - '9000:9000'
+  ui:
+    build: ./front-end-app
+    stdin_open: true
+    environment:
+      - NODE_OPTIONS=--max-old-space-size=2048
+    ports:
+      - '3000:3000'
+    links:
+      - api
