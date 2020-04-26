@@ -12,6 +12,9 @@
     "@google-cloud/bigquery": "^4.7.0",
     "body-parser": "^1.19.0",
     "csv-parser": "^2.3.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pynode": "^0.2.0",
+    "python-shell": "^1.0.8",
+    "xmlhttprequest": "^1.8.0"
   }
 }

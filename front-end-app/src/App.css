@@ -80,3 +80,25 @@ a.active {
   color: white;
   background-color: #03dac5;
 }
+
+.modalbody {
+  background-color: #121212;
+  color: #121212;
+  border-radius: 20 !important;
+}
+.topicOLFoot {
+  background-color: #121212;
+  border: 0px !important;
+}
+.show-grid {
+  background-color: #121212;
+  color: #121212;
+  border-radius: 10;
+}
+.modalbg {
+  /* background-color: #121212; */
+  opacity: 95%;
+  color: #121212 !important;
+  /* filter: blur(2px); */
+  border-radius: 10;
+}

@@ -23,11 +23,8 @@ function App() {
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module2">
               Module2
             </NavLink>
-            <NavLink
-              activeStyle={{ fontWeight: "bold" }}
-              to="/TopicModelTreeMap"
-            >
-              Module3
+            <NavLink activeStyle={{ fontWeight: "bold" }} to="/module3">
+              NewsTopics
             </NavLink>
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module4">
               Resource
