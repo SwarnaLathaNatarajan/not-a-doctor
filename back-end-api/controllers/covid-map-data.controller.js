@@ -12,6 +12,17 @@ exports.getLastUpdated = (req, res) => {
       });
 };
 
+exports.getLastUpdatedAggregates = (req, res) => {
+  covidMapData.getLastUpdatedAggregates(req, (err, data) => {
+      if (err)
+        res.status(500).send({
+          message:
+            err.message || "Some error occurred while retrieving covid map data."
+        });
+      else res.send(data);
+    });
+};
+
 // Get aggregate info
 exports.getAggregates = (req, res) => {
   covidMapData.getAggregates(req, (err, data) => {
