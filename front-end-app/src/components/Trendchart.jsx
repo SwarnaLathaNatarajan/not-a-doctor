@@ -34,7 +34,7 @@ class Trendchart extends Component {
               y: confirmed ? confirmed : 0,
               type: "scatter",
               mode: "markers",
-              line: { color: "#F4B000" },
+              line: { color: "#FF0266" },
               name: "Confirmed Cases",
             },
             {
@@ -42,7 +42,7 @@ class Trendchart extends Component {
               y: deaths ? deaths : 0,
               type: "scatter",
               mode: "markers",
-              line: { color: "#870000" },
+              line: { color: "#923FF7" },
               name: "Death Cases",
             },
             {
@@ -50,7 +50,7 @@ class Trendchart extends Component {
               y: recovered ? recovered : 0,
               type: "scatter",
               mode: "markers",
-              line: { color: "#008000" },
+              line: { color: "03DAC5" },
               name: "Recovered Cases",
             },
           ]}

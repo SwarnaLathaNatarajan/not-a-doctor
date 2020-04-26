@@ -38,7 +38,7 @@ class Trendchart extends React.Component {
                 marker: {
                   size: unpack_bubble(this.state.data),
                   sizemode: "area",
-                  color: "red",
+                  color: "#E51D39",
                   opacity: 0.3,
                 },
                 hovertemplate:
