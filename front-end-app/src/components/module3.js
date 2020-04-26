@@ -5,9 +5,13 @@ import NewsOverlay from "./newsTopicOverlay";
 class Module3 extends Component {
   render() {
     return (
-      <div>
-        <TopicModelTreemap />
-        <NewsOverlay />
+      <div class="d-flex flex-row" style={{ backgroundColor: "#121212" }}>
+        <div class="p-2">
+          <TopicModelTreemap />
+        </div>
+        <div class="p-2">
+          <NewsOverlay />
+        </div>
       </div>
     );
   }
