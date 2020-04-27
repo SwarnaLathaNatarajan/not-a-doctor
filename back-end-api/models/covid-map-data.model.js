@@ -36,7 +36,7 @@ CovidMapData.getLastUpdatedAggregates = (req, result) => {
     const sqlQuery = `SELECT Country_Region, SUM(Confirmed) as Confirmed, SUM(Deaths) as Deaths, SUM(Recovered) as Recovered, SUM(Active) as Active
         FROM \`not-a-doctor-273222.Topic_Modelling.CovidData\`
         WHERE Date_uploaded = (select MAX(Date_uploaded) from \`not-a-doctor-273222.Topic_Modelling.CovidData\`)
-        GROUP BY Country_Region`;
+        GROUP BY Country_Region ORDER BY Confirmed`;
     const options = {
       query: sqlQuery,
       location: "US",

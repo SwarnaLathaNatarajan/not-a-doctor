@@ -3,202 +3,59 @@ import Modal from "react-bootstrap/Modal";
 import { Container, Row, Col } from "reactstrap";
 import Image from "react-bootstrap/Image";
 import { Button } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.css";
-function MydModalWithGrid(props) {
-  return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
-      <Modal.Body className="modalbody">
-        <Container>
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <div>
-                <Image
-                  src="https://www.usnews.com/dims4/USNEWS/0dea99e/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2F34%2F9194c35cf623c91f0f1f8380ef8816%2Ftag%3Areuters.com%2C2020%3Anewsml_LYNXNPEG3N0HT%3A12020-04-24T080727Z_1_LYNXNPEG3N0HT_RTROPTP_3_HEALTH-CORONAVIRUS-PORTUGAL-BRAZIL.JPG"
-                  fluid
-                />
-              </div>
-            </Col>
-            <Col>
-              <a href="https://www.usnews.com/news/world/articles/2020-04-24/coronavirus-crisis-heaps-hardship-on-brazilian-migrants-in-portugal">
-                Coronavirus Crisis Heaps Hardship on Brazilian Migrants in
-                Portugal
-              </a>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <Image
-                src="https://pmcdeadline2.files.wordpress.com/2020/04/shutterstock_editorial_10622362a.jpg?w=681&h=383&crop=1"
-                fluid
-              />
-            </Col>
-            <Col>
-              <a href="https://deadline.com/2020/04/coronavirus-house-nancy-pelosi-kevin-mccarthy-1202916132/">
-                House Passes $484 Billion In Coronavirus Relief, Including
-                Replenishment Of Small Business Loan Program
-              </a>
-            </Col>
-          </Row>
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <div>
-                <Image
-                  src="https://www.usnews.com/dims4/USNEWS/0dea99e/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2F34%2F9194c35cf623c91f0f1f8380ef8816%2Ftag%3Areuters.com%2C2020%3Anewsml_LYNXNPEG3N0HT%3A12020-04-24T080727Z_1_LYNXNPEG3N0HT_RTROPTP_3_HEALTH-CORONAVIRUS-PORTUGAL-BRAZIL.JPG"
-                  fluid
-                />
-              </div>
-            </Col>
-            <Col>
-              <a href="https://www.usnews.com/news/world/articles/2020-04-24/coronavirus-crisis-heaps-hardship-on-brazilian-migrants-in-portugal">
-                Coronavirus Crisis Heaps Hardship on Brazilian Migrants in
-                Portugal
-              </a>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <Image
-                src="https://pmcdeadline2.files.wordpress.com/2020/04/shutterstock_editorial_10622362a.jpg?w=681&h=383&crop=1"
-                fluid
-              />
-            </Col>
-            <Col>
-              <a href="https://deadline.com/2020/04/coronavirus-house-nancy-pelosi-kevin-mccarthy-1202916132/">
-                House Passes $484 Billion In Coronavirus Relief, Including
-                Replenishment Of Small Business Loan Program
-              </a>
-            </Col>
-          </Row>
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <div>
-                <Image
-                  src="https://www.usnews.com/dims4/USNEWS/0dea99e/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2F34%2F9194c35cf623c91f0f1f8380ef8816%2Ftag%3Areuters.com%2C2020%3Anewsml_LYNXNPEG3N0HT%3A12020-04-24T080727Z_1_LYNXNPEG3N0HT_RTROPTP_3_HEALTH-CORONAVIRUS-PORTUGAL-BRAZIL.JPG"
-                  fluid
-                />
-              </div>
-            </Col>
-            <Col>
-              <a href="https://www.usnews.com/news/world/articles/2020-04-24/coronavirus-crisis-heaps-hardship-on-brazilian-migrants-in-portugal">
-                Coronavirus Crisis Heaps Hardship on Brazilian Migrants in
-                Portugal
-              </a>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <Image
-                src="https://pmcdeadline2.files.wordpress.com/2020/04/shutterstock_editorial_10622362a.jpg?w=681&h=383&crop=1"
-                fluid
-              />
-            </Col>
-            <Col>
-              <a href="https://deadline.com/2020/04/coronavirus-house-nancy-pelosi-kevin-mccarthy-1202916132/">
-                House Passes $484 Billion In Coronavirus Relief, Including
-                Replenishment Of Small Business Loan Program
-              </a>
-            </Col>
-          </Row>
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <div>
-                <Image
-                  src="https://www.usnews.com/dims4/USNEWS/0dea99e/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2F34%2F9194c35cf623c91f0f1f8380ef8816%2Ftag%3Areuters.com%2C2020%3Anewsml_LYNXNPEG3N0HT%3A12020-04-24T080727Z_1_LYNXNPEG3N0HT_RTROPTP_3_HEALTH-CORONAVIRUS-PORTUGAL-BRAZIL.JPG"
-                  fluid
-                />
-              </div>
-            </Col>
-            <Col>
-              <a href="https://www.usnews.com/news/world/articles/2020-04-24/coronavirus-crisis-heaps-hardship-on-brazilian-migrants-in-portugal">
-                Coronavirus Crisis Heaps Hardship on Brazilian Migrants in
-                Portugal
-              </a>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <Image
-                src="https://pmcdeadline2.files.wordpress.com/2020/04/shutterstock_editorial_10622362a.jpg?w=681&h=383&crop=1"
-                fluid
-              />
-            </Col>
-            <Col>
-              <a href="https://deadline.com/2020/04/coronavirus-house-nancy-pelosi-kevin-mccarthy-1202916132/">
-                House Passes $484 Billion In Coronavirus Relief, Including
-                Replenishment Of Small Business Loan Program
-              </a>
-            </Col>
-          </Row>
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <div>
-                <Image
-                  src="https://www.usnews.com/dims4/USNEWS/0dea99e/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2F34%2F9194c35cf623c91f0f1f8380ef8816%2Ftag%3Areuters.com%2C2020%3Anewsml_LYNXNPEG3N0HT%3A12020-04-24T080727Z_1_LYNXNPEG3N0HT_RTROPTP_3_HEALTH-CORONAVIRUS-PORTUGAL-BRAZIL.JPG"
-                  fluid
-                />
-              </div>
-            </Col>
-            <Col>
-              <a href="https://www.usnews.com/news/world/articles/2020-04-24/coronavirus-crisis-heaps-hardship-on-brazilian-migrants-in-portugal">
-                Coronavirus Crisis Heaps Hardship on Brazilian Migrants in
-                Portugal
-              </a>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <Image
-                src="https://pmcdeadline2.files.wordpress.com/2020/04/shutterstock_editorial_10622362a.jpg?w=681&h=383&crop=1"
-                fluid
-              />
-            </Col>
-            <Col>
-              <a href="https://deadline.com/2020/04/coronavirus-house-nancy-pelosi-kevin-mccarthy-1202916132/">
-                House Passes $484 Billion In Coronavirus Relief, Including
-                Replenishment Of Small Business Loan Program
-              </a>
-            </Col>
-          </Row>
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <div>
-                <Image
-                  src="https://www.usnews.com/dims4/USNEWS/0dea99e/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fmedia.beam.usnews.com%2F34%2F9194c35cf623c91f0f1f8380ef8816%2Ftag%3Areuters.com%2C2020%3Anewsml_LYNXNPEG3N0HT%3A12020-04-24T080727Z_1_LYNXNPEG3N0HT_RTROPTP_3_HEALTH-CORONAVIRUS-PORTUGAL-BRAZIL.JPG"
-                  fluid
-                />
-              </div>
-            </Col>
-            <Col>
-              <a href="https://www.usnews.com/news/world/articles/2020-04-24/coronavirus-crisis-heaps-hardship-on-brazilian-migrants-in-portugal">
-                Coronavirus Crisis Heaps Hardship on Brazilian Migrants in
-                Portugal
-              </a>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <Image
-                src="https://pmcdeadline2.files.wordpress.com/2020/04/shutterstock_editorial_10622362a.jpg?w=681&h=383&crop=1"
-                fluid
-              />
-            </Col>
-            <Col>
-              <a href="https://deadline.com/2020/04/coronavirus-house-nancy-pelosi-kevin-mccarthy-1202916132/">
-                House Passes $484 Billion In Coronavirus Relief, Including
-                Replenishment Of Small Business Loan Program
-              </a>
-            </Col>
-          </Row>
-        </Container>
-      </Modal.Body>
-    </Modal>
-  );
+import "bootstrap/dist/css/bootstrap.css";
+class MydModalWithGrid extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  state = {
+    data: [],
+  };
+  componentDidMount = () => {
+    fetch("/news-data/get-news?topic=US")
+      .then((res) => res.json())
+      .then((data) => this.setState({ data }));
+  };
+  render() {
+    const { props } = this;
+    var titles = this.state.data.map((val, i) => {
+      return val.title;
+    });
+    var imageurl = this.state.data.map((val, i) => {
+      return val.urlToImage;
+    });
+    var pageurl = this.state.data.map((val, i) => {
+      return val.url;
+    });
+    return (
+      <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
+        <Modal.Body className="modalbody">
+          <Container>
+            {this.state.data.map((t) => (
+              <Row>
+                <Col xs={3} md={3}>
+                  <Image
+                    src={
+                      t.urlToImage === "RAND"
+                        ? "https://www.who.int/images/default-source/health-topics/coronavirus/corona-virus-getty.tmb-1200v.jpg?Culture=en&sfvrsn=217a6a68_24"
+                        : t.urlToImage
+                    }
+                    fluid
+                    rounded
+                  />
+                </Col>
+                <Col align-self-center>
+                  <a href={t.url} style={{ fontSize: "23px" }}>
+                    {t.title}
+                  </a>
+                </Col>
+              </Row>
+            ))}
+          </Container>
+        </Modal.Body>
+      </Modal>
+    );
+  }
 }
 
 function Modal1() {
