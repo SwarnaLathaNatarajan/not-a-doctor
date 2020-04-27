@@ -117,3 +117,6 @@ a.active {
 .mdl-layout__content {
   background-color: #121212;
 }
+.datepicker {
+  border-color: #03dac5;
+}
