@@ -52,19 +52,19 @@ class Trendchart extends React.Component {
               autosize: false,
               width: 1500,
               height: 800,
-              plot_bgcolor: "black",
-              paper_bgcolor: "black",
+              plot_bgcolor: "#121212",
+              paper_bgcolor: "#121212",
               hovermode: "closest",
-              title: {
-                text: "COVID worldwide",
-                xanchor: "center",
-                yanchor: "top",
-                font: {
-                  color: "#C0C0C0",
-                  family: "Roboto, sans-serif",
-                  size: 30,
-                },
-              },
+              // title: {
+              //   text: "COVID worldwide",
+              //   xanchor: "center",
+              //   yanchor: "top",
+              //   font: {
+              //     color: "#C0C0C0",
+              //     family: "Roboto, sans-serif",
+              //     size: 30,
+              //   },
+              // },
               mapbox: {
                 bearing: 0,
                 style: "carto-darkmatter",

@@ -21,16 +21,6 @@
   height: 100%;
 }
 
-/* 
-.banner-text{
-  padding-top: 5em;
-  background-color: rgba();
-  opacity: 5%;
-  width: 75%;
-  margin: auto;
-  border-radius: 10px;
-} */
-
 .banner-text h1 {
   padding-top: 3em;
   /* height: 100%;
@@ -102,6 +92,28 @@ a.active {
   /* filter: blur(2px); */
   border-radius: 10;
 }
+
+.container {
+  margin: 50px 0;
+  padding-left: 0%;
+}
+
+.card {
+  margin: 0 2% !important;
+}
+
+.confirmed {
+  border-bottom: 10px solid #ff0266;
+}
+
+.recovered {
+  border-bottom: 10px solid #03dac5;
+}
+
+.deaths {
+  border-bottom: 10px solid #923ff7;
+}
+
 .mdl-layout__content {
   background-color: #121212;
 }
