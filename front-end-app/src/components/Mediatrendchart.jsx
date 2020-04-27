@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+
 class Mediatrendchart extends Component {
-  state = {};
+  state = { data: this.props.data };
+
   render() {
-    return <h2>{this.props.dates}</h2>;
+    return (
+      <div style={{ color: "white" }}>{JSON.stringify(this.props.data)}</div>
+    );
   }
 }
 
