@@ -1,0 +1,19 @@
+.container {
+  margin: 50px 0;
+}
+
+.card {
+  margin: 0 2% !important;
+}
+
+.confirmed {
+  border-bottom: 10px solid #ff0266;
+}
+
+.recovered {
+  border-bottom: 10px solid #03dac5;
+}
+
+.deaths {
+  border-bottom: 10px solid #923ff7;
+}
