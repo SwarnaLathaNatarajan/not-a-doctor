@@ -123,3 +123,33 @@ a.active {
   width: 100%;
   overflow: hidden;
 }
+.datepicker {
+  background-color: #c4c4c4;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  margin: 1rem;
+}
+#frompicker {
+  float: right;
+  color: #b2b2b2;
+  font-size: 20px;
+  border-radius: 10px;
+}
+#topicker {
+  float: right;
+  color: #b2b2b2;
+  font-size: 20px;
+  border-radius: 10px;
+}
+#checkTrend {
+  font-size: 1.3rem;
+  border-radius: 10px;
+  background-color: #c4c4c4;
+  color: black;
+  margin: 1rem;
+  border-color: #000000;
+  float: right;
+  margin-top: 1rem;
+  width: 0;
+  opacity: 0;
+}
