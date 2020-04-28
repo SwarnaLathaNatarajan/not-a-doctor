@@ -154,8 +154,8 @@ class Mediatrend extends Component {
               layout={{
                 width: 1950,
                 height: 730,
-                plot_bgcolor: "black",
-                paper_bgcolor: "black",
+                 plot_bgcolor: "#121212",
+                paper_bgcolor: "#121212",
                 grid: false,
                 title: {
                   text: "Twitter trend over time",
@@ -214,8 +214,8 @@ class Mediatrend extends Component {
               layout={{
                 width: 1950,
                 height: 730,
-                plot_bgcolor: "black",
-                paper_bgcolor: "black",
+                plot_bgcolor: "#121212",
+                paper_bgcolor: "#121212",
                 grid: false,
                 title: {
                   text: "Reddit trend over time",
@@ -274,8 +274,8 @@ class Mediatrend extends Component {
               layout={{
                 width: 1950,
                 height: 730,
-                plot_bgcolor: "black",
-                paper_bgcolor: "black",
+                 plot_bgcolor: "#121212",
+                paper_bgcolor: "#121212",
                 grid: false,
                 title: {
                   text: "Google search trend over time",
