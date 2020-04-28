@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import "../datepicker.css";
 import Plot from "react-plotly.js";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
+import "../tabs.css";
 class Mediatrend extends Component {
   constructor(props) {
     super(props);
@@ -152,8 +152,8 @@ class Mediatrend extends Component {
                 },
               ]}
               layout={{
-                width: 1700,
-                height: 600,
+                width: 1950,
+                height: 730,
                 plot_bgcolor: "black",
                 paper_bgcolor: "black",
                 grid: false,
@@ -212,8 +212,8 @@ class Mediatrend extends Component {
                 },
               ]}
               layout={{
-                width: 1700,
-                height: 600,
+                width: 1950,
+                height: 730,
                 plot_bgcolor: "black",
                 paper_bgcolor: "black",
                 grid: false,
@@ -272,8 +272,8 @@ class Mediatrend extends Component {
                 },
               ]}
               layout={{
-                width: 1700,
-                height: 600,
+                width: 1950,
+                height: 730,
                 plot_bgcolor: "black",
                 paper_bgcolor: "black",
                 grid: false,
