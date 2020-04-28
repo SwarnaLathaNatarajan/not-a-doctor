@@ -6,7 +6,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 class Simplecard1 extends Component {
   state = { data: [] };
   componentDidMount = () => {
-    fetch("/covid-map-data/aggregates")
+    fetch("/api/covid-map-data/aggregates")
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };

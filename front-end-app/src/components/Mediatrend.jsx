@@ -38,7 +38,7 @@ class Mediatrend extends Component {
     );
   }
   handleClick(start, end) {
-    fetch("/count-info/?from=" + start + "&to=" + end)
+    fetch("/api/count-info/?from=" + start + "&to=" + end)
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   }

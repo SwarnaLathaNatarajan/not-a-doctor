@@ -10,7 +10,7 @@ class TopicCard extends Component {
     data: [],
   };
   componentDidMount = () => {
-    fetch("/news-data/get-topics")
+    fetch("/api/news-data/get-topics")
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };

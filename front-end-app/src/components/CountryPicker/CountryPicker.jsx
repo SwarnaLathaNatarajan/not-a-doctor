@@ -5,7 +5,7 @@ import { NativeSelect, FormControl } from "@material-ui/core";
 class CountryPicker extends React.Component {
   state = { data: [], trend: [] };
   componentDidMount = () => {
-    fetch("/covid-map-data/last-updated")
+    fetch("/api/covid-map-data/last-updated")
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };
