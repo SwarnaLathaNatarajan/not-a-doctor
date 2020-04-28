@@ -117,19 +117,18 @@ a.active {
 .mdl-layout__content {
   background-color: #121212;
 }
+.fill-window {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
 .datepicker {
-  /* border-color: #03dac5; */
   background-color: #c4c4c4;
   font-size: 1.3rem;
   border-radius: 10px;
   margin: 1rem;
-  /* float: right; */
 }
-
-/* #datepickers {
-  float: right;
-  margin-right: 10px;
-} */
 #frompicker {
   float: right;
   color: #b2b2b2;

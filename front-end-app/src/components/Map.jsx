@@ -51,7 +51,7 @@ class Trendchart extends React.Component {
             layout={{
               autosize: false,
               width: 1500,
-              height: 800,
+              height: 700,
               plot_bgcolor: "#121212",
               paper_bgcolor: "#121212",
               hovermode: "closest",
@@ -71,7 +71,7 @@ class Trendchart extends React.Component {
                 accesstoken:
                   "pk.eyJ1Ijoia2VlcnRoaWthcmFqdmVsIiwiYSI6ImNrOWJzd2V3NTAxNDUzbm10enlvdmd4dnUifQ.ylVgtAuLHhOCHYFica7gxA",
                 pitch: 0,
-                zoom: 1,
+                zoom: 1.5,
               },
             }}
           />
