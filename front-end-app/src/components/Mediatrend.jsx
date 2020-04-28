@@ -65,10 +65,10 @@ class Mediatrend extends Component {
         <div className="desc">
           <h1>Social Media Trend Analysis</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Scelerisque viverra mauris in aliquam sem fringilla ut. Quisque
-            sagittis purus sit amet volutpat consequat mauris nunc.
+            In this module, we have analyzed the impact of COVID-19 on Search
+            trends of popular social media platforms such as Twitter, Reddit and
+            Google. The analysis can be fine-grained to a particular time period
+            by selecting the to and from dates below.
           </p>
         </div>
         <div id="datepickers">

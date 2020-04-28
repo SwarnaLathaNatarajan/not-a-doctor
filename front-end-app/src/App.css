@@ -119,11 +119,13 @@ a.active {
   float: right;
   color: #b2b2b2;
   font-size: 20px;
+  border-radius: 10px;
 }
 #topicker {
   float: right;
   color: #b2b2b2;
   font-size: 20px;
+  border-radius: 10px;
 }
 #checkTrend {
   font-size: 1.3rem;
@@ -134,4 +136,6 @@ a.active {
   border-color: #000000;
   float: right;
   margin-top: 1rem;
+  width: 0;
+  opacity: 0;
 }
