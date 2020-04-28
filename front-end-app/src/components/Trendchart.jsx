@@ -57,8 +57,8 @@ class Trendchart extends Component {
           layout={{
             width: "700",
             height: "400",
-            plot_bgcolor: "black",
-            paper_bgcolor: "black",
+            plot_bgcolor: "#121212",
+            paper_bgcolor: "#121212",
             grid: false,
             title: {
               text: "COVID worldwide trend over time",

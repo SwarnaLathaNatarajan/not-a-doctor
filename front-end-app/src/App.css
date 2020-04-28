@@ -117,3 +117,9 @@ a.active {
 .mdl-layout__content {
   background-color: #121212;
 }
+.fill-window {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}

@@ -1,65 +1,23 @@
 import React, { Component, useState } from "react";
 import Plot from "react-plotly.js";
 class TopicModelTreemap extends Component {
-  state = {};
-
+  state = { data: [] };
+  componentDidMount = () => {
+    fetch("/news-data/get-topics")
+      .then((res) => res.json())
+      .then((data) => this.setState({ data }));
+  };
   render() {
-    var topiclist = [
-      " ",
-      "updates",
-      "johnson",
-      "health",
-      "workers-home",
-      "death",
-      "lockdown, hospital",
-      "warns-hit",
-      "dies",
-      "business, insider",
-      "business, insider",
-      "trump, checks",
-      "outbreak",
-      "protests-china",
-      "world",
-      "crisis",
-      "pandemic",
-      "trump, americans",
-      "testing",
-      "amid",
-      "insider-people",
-      "thehill",
-      "cnn",
-      "calls",
-      "week-fears",
-      "lockdown, people",
-    ];
-    var probs = [
-      0,
-      0.04436,
-      0.03912,
-      0.04116,
-      0.0377,
-      0.04656,
-      0.04027,
-      0.03699,
-      0.03704,
-      0.03426,
-      0.04178,
-      0.04353,
-      0.04318,
-      0.04114,
-      0.04149,
-      0.03875,
-      0.04198,
-      0.03339,
-      0.04228,
-      0.03896,
-      0.03968,
-      0.0428,
-      0.0384,
-      0.03788,
-      0.03931,
-      0.03798,
-    ];
+    var topiclist = this.state.data.map((val, i) => {
+      return val.Topics;
+    });
+    topiclist.unshift(" ");
+    var probs = this.state.data.map((val, i) => {
+      return val.Probability;
+    });
+    probs.unshift(0);
+    let par = new Array(20).fill(" ");
+    par.unshift("");
     return (
       <div style={{ backgroundColor: "#121212" }}>
         <Plot
@@ -67,39 +25,13 @@ class TopicModelTreemap extends Component {
             {
               type: "treemap",
               labels: topiclist,
-              parents: [
-                "",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-              ],
+              parents: par,
               values: probs,
               textposition: "middle center",
               textfont: { family: "Roboto", size: 25 },
             },
           ]}
+          onClick={() => console.debug("onClick")}
           layout={{
             width: 1200,
             height: 800,
@@ -112,7 +44,6 @@ class TopicModelTreemap extends Component {
             treemapcolorway: [
               "#EF0078",
               "#1EB980",
-              // "#FFCF44",
               "#1EA4B9",
               "#B15DFF",
               "#72DEFF",

@@ -1,100 +1,64 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  Grid,
-  StylesProvider,
-  List,
-  ListItem,
-  ListItemText,
-} from "@material-ui/core";
-import styles from "./Cards/cards.module.css";
-import cx from "classnames";
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import { Scrollbars } from "react-custom-scrollbars";
+import Card from "react-bootstrap/Card";
+import { Container, Row, Col } from "reactstrap";
+import Image from "react-bootstrap/Image";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 
-var theme2 = createMuiTheme({
-  typography: {
-    h6: {
-      color: "#03DAC5",
-    },
-  },
-});
-var theme1 = createMuiTheme({
-  typography: {
-    h6: {
-      color: "#FF0266",
-      //   secondary: "#03DAC5",
-    },
-  },
-});
-class NewsCard extends Component {
+class TopicCard extends Component {
   state = {
     data: [],
   };
   componentDidMount = () => {
-    fetch("/news-data/get-news?topic=lockdown")
+    fetch("/news-data/get-topics")
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };
   render() {
-    var titles = this.state.data.map((val, i) => {
-      return val.title;
+    var topiclist = this.state.data.map((val, i) => {
+      return val.Topics;
     });
     return (
-      <div className={styles.container}>
-        <Grid container spacing={1} justify="center">
-          <Grid
-            item
-            component={Card}
-            xs={12}
-            md={3}
-            className={cx(styles.card, styles.confirmed)}
-          >
-            <Scrollbars style={{ width: 500, height: 300 }}>
-              <CardContent style={{ maxHeight: 600 }}>
-                <Typography variant="h5" color="textPrimary" gutterBottom>
-                  Confirmed Cases By Region
-                </Typography>
-                <List>
-                  <ListItem>
-                    <ListItemText
-                      primary={
-                        <React.Fragment>
-                          <MuiThemeProvider theme={theme1}>
-                            <Typography
-                              component="span"
-                              variant="h1"
-                              color="textPrimary"
-                            >
-                              {/* {confirmed.map((confirm) => (
-                              <ol>{confirm} </ol>
-                            ))} */}
-                              {titles.map((reg) => (
-                                <ol>
-                                  <Typography
-                                    component="span"
-                                    variant="h6"
-                                    color="primary"
-                                  >
-                                    {reg}
-                                  </Typography>
-                                </ol>
-                              ))}
-                            </Typography>
-                          </MuiThemeProvider>
-                        </React.Fragment>
-                      }
-                    />
-                  </ListItem>
-                </List>
-              </CardContent>
-            </Scrollbars>
-          </Grid>
-        </Grid>
-      </div>
+      <Card
+        text={"white"}
+        bg="dark"
+        style={{
+          // backgroundColor: "#FFFFFF10",
+          width: "28rem",
+          height: "40rem",
+          borderRadius: "30px",
+        }}
+      >
+        <Card.Header
+          className="justify-content-md-center"
+          style={{ fontSize: 20 }}
+          align="center"
+        >
+          TRENDING TOPICS
+        </Card.Header>
+        <Card.Body>
+          <Container>
+            {this.state.data.map((t, i) => (
+              <Row style={{ fontSize: 20 }}>
+                <Col className="justify-content-md-center" md={2}>
+                  {i + 1}.
+                </Col>
+                <Col className="justify-content-md-center" md={35}>
+                  {t.Topics}
+                </Col>
+                <Col md={3}>
+                  {Math.random() >= 0.5 ? (
+                    <ArrowDownwardIcon color="secondary" />
+                  ) : (
+                    <ArrowUpwardIcon style={{ color: "green" }} />
+                  )}
+                </Col>
+              </Row>
+            ))}
+          </Container>
+        </Card.Body>
+      </Card>
     );
   }
 }
-export default NewsCard;
+export default TopicCard;

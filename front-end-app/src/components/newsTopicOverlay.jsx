@@ -4,6 +4,8 @@ import { Container, Row, Col } from "reactstrap";
 import Image from "react-bootstrap/Image";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
+import TopicModelTreemap from "./TopicModelTreemap";
+
 class MydModalWithGrid extends React.Component {
   constructor(props) {
     super(props);
@@ -12,7 +14,7 @@ class MydModalWithGrid extends React.Component {
     data: [],
   };
   componentDidMount = () => {
-    fetch("/news-data/get-news?topic=US")
+    fetch("/news-data/get-news?topic=warns")
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };
@@ -66,7 +68,6 @@ function Modal1() {
       <Button variant="primary" onClick={() => setModalShow(true)}>
         Display Articles
       </Button>
-
       <MydModalWithGrid
         className="modalbg"
         show={modalShow}

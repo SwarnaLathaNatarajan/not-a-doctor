@@ -17,7 +17,7 @@ NewsData.getNewsWithKeyword = (req, result) => {
   async function queryGetNewsWithKeyword() {
     const sqlQuery = `SELECT DISTINCT *
         FROM \`not-a-doctor-273222.Topic_Modelling.NewsData\` 
-        WHERE title LIKE \'%${req.query.topic}%\'`;
+        WHERE title LIKE \'%${req.query.topic}%\' AND urlToImage <>"RAND"`;
     const options = {
       query: sqlQuery,
       location: "US",
@@ -32,12 +32,20 @@ NewsData.getNewsWithKeyword = (req, result) => {
 NewsData.getTopics = (req, result) => {
   var results = [];
   async function querygetTopics() {
-    fs.createReadStream("./news-data/" + req.query.filename + ".csv")
-      .pipe(csv())
-      .on("data", (data) => results.push(data))
-      .on("end", () => {
-        result(null, results);
-      });
+    // fs.createReadStream("./news-data/" + req.query.filename + ".csv")
+    //   .pipe(csv())
+    //   .on("data", (data) => results.push(data))
+    //   .on("end", () => {
+    //     result(null, results);
+    //   });
+    const sqlQuery = `SELECT DISTINCT * FROM \`not-a-doctor-273222.Topic_Modelling.Topics\` ORDER BY Date_uploaded DESC, Probability DESC LIMIT 20`;
+    const options = {
+      query: sqlQuery,
+      location: "US",
+    };
+    const [rows] = await bigqueryClient.query(options);
+    console.log("Topics api called!");
+    result(null, rows);
   }
   querygetTopics();
 };

@@ -63,13 +63,6 @@ class AllCards extends React.Component {
               className="confirmed"
               width="20px"
             >
-              {/* <List
-                style={{
-                  background: "#1E1E1E",
-                  padding: "0px",
-                  width: "300px",
-                }}
-              > */}
               <Scrollbars style={{ width: "auto", height: 300 }}>
                 <ListSubheader
                   style={{ background: "#ff0266" }}
