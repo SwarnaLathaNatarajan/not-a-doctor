@@ -32,7 +32,7 @@ class Searchbox extends Component {
       console.log("value", event.target.value);
       this.setState({ item: event.target.value });
       this.setState({ data: [] });
-      fetch("/resource-tracker/?item=" + event.target.value)
+      fetch("/api/resource-tracker/?item=" + event.target.value)
         .then((res) => res.json())
         .then((data) => this.setState({ data }));
       this.setState({ showModal: true });

@@ -14,7 +14,7 @@ class MydModalWithGrid extends React.Component {
     data: [],
   };
   componentDidMount = () => {
-    fetch("/news-data/get-news?topic=warns")
+    fetch("/api/news-data/get-news?topic=warns")
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };

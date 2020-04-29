@@ -28,7 +28,7 @@ var theme1 = createMuiTheme({
 class Cards extends React.Component {
   state = { data: [] };
   componentDidMount = () => {
-    fetch("/covid-map-data/aggregates")
+    fetch("/api/covid-map-data/aggregates")
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };
