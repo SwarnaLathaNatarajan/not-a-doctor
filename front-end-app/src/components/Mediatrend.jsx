@@ -17,7 +17,7 @@ class Mediatrend extends Component {
   }
   componentDidMount = () => {
     fetch(
-      "/count-info/?from=" +
+      "/api/count-info/?from=" +
         this.parseDate(this.state.startDate) +
         "&to=" +
         this.parseDate(this.state.endDate)

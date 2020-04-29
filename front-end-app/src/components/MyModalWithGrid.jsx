@@ -20,7 +20,7 @@ export default class MydModalWithGrid extends React.Component {
     this.setState({
       data: [],
     });
-    fetch("api/news-data/get-news?topic=" + defaultTopic)
+    fetch("/api/news-data/get-news?topic=" + defaultTopic)
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };
