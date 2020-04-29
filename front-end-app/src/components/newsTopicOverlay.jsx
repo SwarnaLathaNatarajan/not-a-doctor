@@ -17,7 +17,7 @@ class MyModalWithGrid extends React.Component {
   componentDidMount = () => {
     var defaultTopic = window.topicClicked ? window.topicClicked : "US";
     defaultTopic = defaultTopic.split("-")[0];
-    fetch("/news-data/get-news?topic=" + defaultTopic)
+    fetch("/api/news-data/get-news?topic=" + defaultTopic)
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };

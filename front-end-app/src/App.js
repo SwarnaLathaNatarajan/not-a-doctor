@@ -18,16 +18,16 @@ function App() {
         >
           <Navigation>
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module1">
-              Module1
+              Dashboard
             </NavLink>
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module2">
-              Module2
+              SocialMediaTrends
             </NavLink>
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module3">
               NewsTopics
             </NavLink>
             <NavLink activeStyle={{ fontWeight: "bold" }} to="/module4">
-              Resource
+              ResourceTracker
             </NavLink>
           </Navigation>
         </Header>

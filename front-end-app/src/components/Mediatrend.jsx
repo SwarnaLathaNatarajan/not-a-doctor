@@ -65,10 +65,12 @@ class Mediatrend extends Component {
         <div className="desc">
           <h1>Social Media Trend Analysis</h1>
           <p>
-            In this module, we have analyzed the impact of COVID-19 on Search
-            trends of popular social media platforms such as Twitter, Reddit and
-            Google. The analysis can be fine-grained to a particular time period
-            by selecting the to and from dates below.
+            <center>
+              In this module, we have analyzed the impact of COVID-19 on Search
+              trends of popular social media platforms such as Twitter, Reddit
+              and Google.<br></br> The analysis can be fine-grained to a
+              particular time period by selecting the to and from dates below.
+            </center>
           </p>
         </div>
         <div id="datepickers">
@@ -154,7 +156,7 @@ class Mediatrend extends Component {
               layout={{
                 width: 1950,
                 height: 730,
-                 plot_bgcolor: "#121212",
+                plot_bgcolor: "#121212",
                 paper_bgcolor: "#121212",
                 grid: false,
                 title: {
@@ -274,7 +276,7 @@ class Mediatrend extends Component {
               layout={{
                 width: 1950,
                 height: 730,
-                 plot_bgcolor: "#121212",
+                plot_bgcolor: "#121212",
                 paper_bgcolor: "#121212",
                 grid: false,
                 title: {
