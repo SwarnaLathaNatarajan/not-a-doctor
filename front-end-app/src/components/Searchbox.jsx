@@ -1,7 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, Text } from "react";
 import "./search-style.css";
+import { Container, Row, Col } from "reactstrap";
 import { render } from "react-dom";
 import { TransitionMotion, spring } from "react-motion";
+import Modal from "react-bootstrap/Modal";
+import Image from "react-bootstrap/Image";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 class Searchbox extends Component {
   constructor(props) {
@@ -14,6 +19,7 @@ class Searchbox extends Component {
       label: props.label || "Search Product",
       item: null,
       data: [],
+      showModal: false,
     };
   }
   changeValue(event) {
@@ -29,7 +35,12 @@ class Searchbox extends Component {
       fetch("/api/resource-tracker/?item=" + event.target.value)
         .then((res) => res.json())
         .then((data) => this.setState({ data }));
+      this.setState({ showModal: true });
     }
+  }
+
+  handleToggleModal() {
+    this.setState({ showModal: !this.state.showModal });
   }
   render() {
     const { active, value, error, label } = this.state;
@@ -58,11 +69,48 @@ class Searchbox extends Component {
             {error || label}
           </label>
         </div>
-        <div style={{ color: "white" }}>
-          {this.state.item}
-          <br></br>
-          {JSON.stringify(this.state.data)}
-        </div>
+        <Modal
+          show={this.state.showModal}
+          onHide={() => this.handleToggleModal()}
+          className="r-modalbg"
+          size="xl"
+        >
+          <Modal.Body className="r-modalbody">
+            <Container>
+              {this.state.data.length == 0 && (
+                <center>
+                  <Loader
+                    type="Circles"
+                    text-align="center"
+                    color="#03dac5"
+                    height={100}
+                    width={100}
+                    timeout={10000} //3 secs
+                  />
+                </center>
+              )}
+              {this.state.data.length > 0 &&
+                this.state.data.map((t) => (
+                  <Row>
+                    <Col xs={3} md={3}>
+                      <Image
+                        src={t.image_url}
+                        height="90"
+                        width="90"
+                        fluid
+                        rounded
+                      />
+                    </Col>
+                    <Col align-self-center>
+                      <a href={t.product_url} style={{ fontSize: "23px" }}>
+                        {t.title}
+                      </a>
+                    </Col>
+                  </Row>
+                ))}
+            </Container>
+          </Modal.Body>
+        </Modal>
       </div>
     );
   }
