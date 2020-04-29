@@ -11,7 +11,7 @@ import TrendChart from "./Trendchart";
 class Simplecard2 extends Component {
   state = { data: [], trend: [] };
   componentDidMount = () => {
-    fetch("/covid-map-data/last-updated-aggregates")
+    fetch("/api/covid-map-data/last-updated-aggregates")
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
   };
