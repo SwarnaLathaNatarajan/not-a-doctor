@@ -1,0 +1,45 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: front-end-app-service
+spec:
+  type: NodePort
+  selector:
+    app: front-end-app
+  ports:
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
+    name: http
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: back-end-api-service
+spec:
+  type: NodePort
+  selector:
+    app: back-end-api
+  ports:
+  - port: 9000
+    targetPort: 9000
+    protocol: TCP
+    name: http
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service
+  namespace: default
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: front-end-app-service
+          servicePort: 3000
+      - path: /api/*
+        backend:
+          serviceName: back-end-api-service
+          servicePort: 9000
