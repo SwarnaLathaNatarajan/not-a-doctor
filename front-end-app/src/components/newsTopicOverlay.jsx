@@ -16,7 +16,7 @@ class MyModalWithGrid extends React.Component {
   };
   componentDidMount = () => {
     var defaultTopic = window.topicClicked ? window.topicClicked : "US";
-    defaultTopic = defaultTopic.split("-")[0];
+    // defaultTopic = defaultTopic.split("-")[0];
     fetch("/api/news-data/get-news?topic=" + defaultTopic)
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
@@ -68,9 +68,9 @@ function Modal1() {
 
   return (
     <>
-      {/* <Button variant="primary" onClick={() => setModalShow(true)}>
+      <Button variant="primary" onClick={() => setModalShow(true)}>
         <AllOutRoundedIcon></AllOutRoundedIcon>
-      </Button> */}
+      </Button>
       <MyModalWithGrid
         className="modalbg"
         show={modalShow}
