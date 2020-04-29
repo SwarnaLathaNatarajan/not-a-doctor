@@ -8,10 +8,10 @@ class Module4 extends Component {
         <div className="desc">
           <h1>Resource Tracker</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Scelerisque viverra mauris in aliquam sem fringilla ut. Quisque
-            sagittis purus sit amet volutpat consequat mauris nunc.
+            The rise of the COVID-19 pandemic has resulted in people hoarding
+            basic home supplies. This has created a great panic among people. In
+            this module, the availability of products in stores like Walmart,
+            Target and Costco can be tracked easily.
           </p>
         </div>
         <center>
