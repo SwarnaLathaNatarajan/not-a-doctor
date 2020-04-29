@@ -24,7 +24,7 @@ class Simplecard1 extends Component {
 
     const confirmed_data = parseInt(confirmed[confirmed.length - 1]);
     return (
-      <CardGroup style={{ align: "justify" }}>
+      <CardGroup>
         <Card
           text={"white"}
           style={{

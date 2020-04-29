@@ -4,6 +4,7 @@ import { Container, Row, Col } from "reactstrap";
 import Image from "react-bootstrap/Image";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+import FlareSharpIcon from "@material-ui/icons/FlareSharp";
 
 class TopicCard extends Component {
   state = {
@@ -48,7 +49,11 @@ class TopicCard extends Component {
                 </Col>
                 <Col md={3}>
                   {Math.random() >= 0.5 ? (
-                    <ArrowDownwardIcon color="secondary" />
+                    Math.random() >= 0.5 ? (
+                      <ArrowDownwardIcon color="secondary" />
+                    ) : (
+                      <FlareSharpIcon style={{ color: "yellow" }} />
+                    )
                   ) : (
                     <ArrowUpwardIcon style={{ color: "green" }} />
                   )}

@@ -22,13 +22,18 @@ class Simplecard2 extends Component {
           text={"white"}
           style={{
             backgroundColor: "#FFFFFF10",
-            width: "18rem",
+            width: "20rem",
             height: "25rem",
-            borderRadius: "30px",
+            borderRadius: "20px",
           }}
         >
           <Scrollbars
-            style={{ backgroundColor: "#FFFFFF10", width: "auto", height: 400 }}
+            style={{
+              backgroundColor: "#FFFFFF10",
+              width: "auto",
+              height: 400,
+              borderRadius: "20px",
+            }}
           >
             <ListSubheader
               style={{
@@ -45,7 +50,7 @@ class Simplecard2 extends Component {
             <Card.Body style={{ height: 400 }}>
               <Container style={{ height: 400 }}>
                 {this.state.data.map((t) => (
-                  <Row style={{ fontSize: 15, alignContent: "justify" }}>
+                  <Row style={{ fontSize: 18, alignContent: "justify" }}>
                     <Col>{t.Country_Region}</Col>
                     <Col>{t.Confirmed}</Col>
                   </Row>
@@ -58,13 +63,18 @@ class Simplecard2 extends Component {
           text={"white"}
           style={{
             backgroundColor: "#FFFFFF10",
-            width: "18rem",
+            width: "20rem",
             height: "25rem",
-            borderRadius: "30px",
+            borderRadius: "20px",
           }}
         >
           <Scrollbars
-            style={{ backgroundColor: "#FFFFFF10", width: "auto", height: 400 }}
+            style={{
+              backgroundColor: "#FFFFFF10",
+              width: "auto",
+              height: 400,
+              borderRadius: "20px",
+            }}
           >
             <ListSubheader
               style={{
@@ -80,7 +90,7 @@ class Simplecard2 extends Component {
             </ListSubheader>
             <Container style={{ height: 400 }}>
               {this.state.data.map((t) => (
-                <Row style={{ fontSize: 15, alignContent: "justify" }}>
+                <Row style={{ fontSize: 18, alignContent: "justify" }}>
                   <Col>{t.Country_Region}</Col>
                   <Col>{t.Deaths}</Col>
                 </Row>
@@ -92,13 +102,18 @@ class Simplecard2 extends Component {
           text={"white"}
           style={{
             backgroundColor: "#FFFFFF10",
-            width: "18rem",
+            width: "20rem",
             height: "25rem",
-            borderRadius: "30px",
+            borderRadius: "20px",
           }}
         >
           <Scrollbars
-            style={{ backgroundColor: "#FFFFFF10", width: "auto", height: 400 }}
+            style={{
+              backgroundColor: "#FFFFFF10",
+              width: "auto",
+              height: 400,
+              borderRadius: "20px",
+            }}
           >
             <ListSubheader
               style={{
@@ -114,7 +129,7 @@ class Simplecard2 extends Component {
             </ListSubheader>
             <Container style={{ height: 400 }}>
               {this.state.data.map((t) => (
-                <Row style={{ fontSize: 15 }}>
+                <Row style={{ fontSize: 18 }}>
                   <Col>{t.Country_Region}</Col>
                   <Col>{t.Recovered}</Col>
                 </Row>

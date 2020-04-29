@@ -7,16 +7,19 @@ import "bootstrap/dist/css/bootstrap.css";
 import TopicModelTreemap from "./TopicModelTreemap";
 import AllOutRoundedIcon from "@material-ui/icons/AllOutRounded";
 
-class MyModalWithGrid extends React.Component {
+export default class MydModalWithGrid extends React.Component {
   constructor(props) {
     super(props);
   }
   state = {
     data: [],
   };
-  componentDidMount = () => {
+
+  componentWillReceiveProps = () => {
     var defaultTopic = window.topicClicked ? window.topicClicked : "US";
-    defaultTopic = defaultTopic.split("-")[0];
+    this.setState({
+      data: [],
+    });
     fetch("/news-data/get-news?topic=" + defaultTopic)
       .then((res) => res.json())
       .then((data) => this.setState({ data }));
@@ -62,28 +65,3 @@ class MyModalWithGrid extends React.Component {
     );
   }
 }
-
-function Modal1() {
-  const [modalShow, setModalShow] = useState(false);
-
-  return (
-    <>
-      {/* <Button variant="primary" onClick={() => setModalShow(true)}>
-        <AllOutRoundedIcon></AllOutRoundedIcon>
-      </Button> */}
-      <MyModalWithGrid
-        className="modalbg"
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-        centered="true"
-        size="xl"
-        scrollable="true"
-      />
-    </>
-  );
-}
-
-function NewsOverlay() {
-  return <Modal1 />;
-}
-export default NewsOverlay;
