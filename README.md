@@ -4,4 +4,4 @@ This was designed and developed using Express.js, React.js and Google BigQuery f
 
 **Project Demo**
 
-https://www.youtube.com/watch?v=Gvd6g…
+https://www.youtube.com/watch?v=Gvd6gzVIt7E
